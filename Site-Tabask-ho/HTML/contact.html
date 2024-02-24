@@ -1,0 +1,168 @@
+<!-- Page réalisé par John Paillé -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link rel="stylesheet" href="../CSS/style_all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../JS/script_contact.js"></script>
+  <link rel="icon" type="image/png" href="Logo.png">
+  <title>Contact</title>
+</head>
+
+<body class="page-contact">
+  <main>
+    <h1>
+      Taba's KHO
+      <img src="../HTML/images/Logo.png" alt="Logo_Taba's_KOH" width="80px" height="80px">
+    </h1>
+    <h2>Contact</h2>
+    <form action="traitement.php" method="post" onsubmit="return validateEmail() && submitForm()" id="myForm">        <li>
+      <label for="prenom">Prenom :</label>
+      <input type="text" id="name" name="user_name" />
+    </li>
+    <li>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="user_nom" />
+    </li>
+    <li>
+      <label for="mail">E-mail :</label>
+      <input type="email" id="email" name="user_mail" />
+      <span id="emailError" style="color: red;"></span>
+    </li>
+    <li>
+      <label for="msg">Message :</label>
+      <textarea id="msg" name="user_message"></textarea>
+    </li>
+  </ul>
+  <div class="button">
+    <button type="submit">Envoyer le message</button>
+  </div>
+  <!-- Ajoutez cet élément pour la logique d'animation -->
+  <div id="loadingMessage" style="text-align: center;"></div>
+</form>
+
+<div class="contact_carousel">
+  <h1>Quelques images suplémentaire :</h1>
+  <div class="carousel">
+    <input type="radio" name="slides" checked="checked" id="slide-1">
+    <input type="radio" name="slides" id="slide-2">
+    <input type="radio" name="slides" id="slide-3">
+    <input type="radio" name="slides" id="slide-4">
+    <input type="radio" name="slides" id="slide-5">
+    <input type="radio" name="slides" id="slide-6">
+    <ul class="carousel__slides">
+      <li class="carousel__slide">
+        <figure>
+          <div>
+            <img class="image_developper" src="images/Contact_carousel_image1.png" alt="" width="50px" height="50px">
+          </div>
+        </figure>
+      </li>
+      <li class="carousel__slide">
+        <figure>
+          <div>
+            <img class="image_developper" src="images/Contact_carousel_image2.jpg" alt="">
+          </div>
+        </figure>
+      </li>
+      <li class="carousel__slide">
+        <figure>
+          <div>
+            <img class="image_developper" src="images/Contact_carousel_image3.jpg" alt="">
+          </div>
+        </figure>
+      </li>
+      <li class="carousel__slide">
+        <figure>
+          <div>
+            <img class="image_developper" src="images/Contact_carousel_image4.jpg" alt="">
+          </div>
+        </figure>
+      </li>
+      <li class="carousel__slide">
+        <figure>
+          <div>
+            <img class="image_developper" src="images/contact_carousel_image5.jpg" alt="">
+          </div>
+        </figure>
+      </li>
+      <li class="carousel__slide">
+        <figure>
+          <div>
+            <img class="image_developper" src="images/Contact_carousel_image6.jpg" alt="">
+          </div>
+        </figure>
+      </li>
+    </ul>    
+    <ul class="carousel__thumbnails">
+      <li>
+        <label for="slide-1"><img class="petite_image" src="images/Contact_carousel_image1.png" alt=""></label>
+      </li>
+      <li>
+        <label for="slide-2"><img class="petite_image" src="images/Contact_carousel_image2.jpg" alt=""></label>
+      </li>
+      <li>
+        <label for="slide-3"><img class="petite_image" src="images/Contact_carousel_image3.jpg" alt=""></label>
+      </li>
+      <li>
+        <label for="slide-4"><img class="petite_image" src="images/Contact_carousel_image4.jpg" alt=""></label>
+      </li>
+      <li>
+        <label for="slide-5"><img class="petite_image" src="images/contact_carousel_image5.jpg" alt=""></label>
+      </li>
+      <li>
+        <label for="slide-6"><img class="petite_image" src="images/Contact_carousel_image6.jpg" alt=""></label>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<nav>
+  <!-- Menu -->
+  <div id="sidebar">
+    <a href="./accueil.html">Accueil</a>
+    <a href="./presentation.html" class="has-submenu">Présentation</a>
+    <div class="submenu">
+      <a href="./presentation.html#saison1">Saison 1</a>
+      <a href="./presentation.html#saison2">Saison 2</a>
+    </div>
+    <a href="./critique.html" class="has-submenu">Critique</a>
+    <div class="submenu">
+      <a href="./critique.html#S1" class="has-submenu">Saison 1</a>
+      <div class="submenu">
+        <a href="./critique.html#Presse_S1">Presses</a>
+        <a href="./critique.html#Spectateur_S1">Spectateurs</a>
+      </div>
+      <a href="./critique.html#S2" class="has-submenu">Saison 2</a>
+      <div class="submenu">
+        <a href="./critique.html#Presse_S2">Presses</a>
+        <a href="./critique.html#Spectateur_S2">Spectateurs</a>
+      </div>
+    </div>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<div id="content">
+  <div id="menuIcon">&#9776; Taba's KHO</div>
+</div>
+</nav>
+</main>
+
+<!-- Bas de page -->
+<footer>
+  <p>Mentions légals  |  Conditions d’utilisations  |  A propos</p>
+  <figure class="reseaux">
+    <a href="https://www.instagram.com/"><img src="../HTML/Icon/IconInstagram.png" alt="Instagram" width="50" height="45"></a>
+    <a href="https://www.facebook.com/?locale=fr_FR"><img src="../HTML/Icon/IconFacebook.png" alt="Facebook" width="50" height="45"></a>
+    <a href="mailto:loris.caruhel@etudiant.univ-rennes1.fr"><img src="../HTML/Icon/IconMail.png" alt="Email" width="50" height="45"></a>
+    <a href="https://twitter.com/?lang=fr"><img src="../HTML/Icon/IconX.png" alt="X" width="50" height="45"></a>
+  </figure>    
+  <p>Copyright 2023-2024</p>
+</footer>
+</body>
+
+</html>

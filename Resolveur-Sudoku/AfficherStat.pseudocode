@@ -1,0 +1,13 @@
+procédure afficheStat(entF nbCaseRemplis : entier, entF nbCaseARemplir, 
+                      entF nbCandidatIntitial : entier, entF nbCandidatFinal) c'est
+début
+    écrireEcran("Le nombre de case remplis est de ", nbCaseRemplis);
+    écrireEcran("Le nombre de case remplis est de ", nbCaseARemplis);
+
+    réel tauxRemplissage := (nbCaseRemplis / nbCaseARemplis) * 100;
+
+    écrireEcran("Le nombre de case remplis est de ", nbCandidatIntitial);
+    écrireEcran("Le nombre de case remplis est de ", nbCandidatFinal);
+
+    réel tauxElimination := (nbCandidatIntitial / nbCandidatFinal) * 100;
+fin

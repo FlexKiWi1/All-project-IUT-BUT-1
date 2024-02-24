@@ -1,0 +1,71 @@
+constante entier : N = 3;
+constante entier : TAILLE := (N * N);
+
+type tCase tgrille[TAILLE][TAILLE];
+
+type tCase1 = structure
+début
+    entier : valeur;
+    entier : candidats[TAILLE+1];
+    entier : nbCandidats;
+fin
+
+
+procédure ajouterCandidat(entF/sortF laCase : tCase1, entF val:entier)
+début
+    booléen candidatMis := false;
+    entier i := 1;
+
+    tant que(i <= TAILLE && !candidatMis) faire
+        si(laCase.candidats[i] == val) faire
+            écrireEcran("Déjà présent comme candidat !\n");
+            i++;
+        sinon
+            laCase.candidats[laCase.nbCandidats + 1] := val;
+            candidatMis := vrai;
+        fin si
+    fin tant que
+fin
+
+
+procédure retirerCandidat(entF/sortF laCase : tCase1, entF val : entier)
+début
+    booléen indiceCandidatT := false;
+    entier indiceCandidat := 1;
+
+    tant que(indiceCandidat < TAILLE && !indiceCandidatT) faire
+        si(laCase.candidat[indiceCandidat] == val) faire
+            indiceCandidatT := vrai;
+        sinon
+            indiceCandidat++;
+        fin si
+    fin tant que
+
+    pour i allant de indiceCandidat + 1 à nbCandidat faire
+        laCase.candidat[i - 1] := laCase.candidat[i];
+    fin pour
+fin
+
+
+fonction estCandidat(entF laCase : tCase1, entF val : entier) délivre booléen
+début
+    booléen : estCandidat := faux; 
+    entier indiceCandidat := 1;
+
+    tant que(indiceCandidat < TAILLE && !estCandidat) faire
+        si(laCase.candidat[indiceCandidat] == vrai) faire
+            estCandidat := vrai;
+        sinon
+            indiceCandidat++;
+        fin si
+    fin tant que
+
+    retourne estCandidat;
+fin
+
+
+fonction nbCandidats(entF laCase : tCase1) délivre entier
+début
+    entier : nbCandidats := laCase.nbCandidats;
+    retourne nbCandidats;
+fin

@@ -1,0 +1,1288 @@
+/* Définition des polices personnalisées */
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    /* Chemin vers la police Kaushan Script */
+    src: url('Police/KaushanScript/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('Police/KaushanScript/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mv_boliregular';
+    /* Chemin vers la police Mv Boli */
+    src: url('Police/MvBoli/mvboli-webfont.woff2') format('woff2'),
+         url('Police/MvBoli/mvboli-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Réinitialisation des marges */
+* {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Styles généraux du site */
+body {
+    /* Mise en page générale */
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fond dégradé animé */
+    background: linear-gradient(
+      135deg, #121212 25%,
+      #1a1a1a 25%, 
+      #1a1a1a 50%, 
+      #121212 50%, 
+      #121212 75%, 
+      #1a1a1a 75%, 
+      #1a1a1a);
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+    transition: 0.5s ease-in-out;
+}
+
+/* Animation du fond dégradé */
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+/* Styles pour les titres et paragraphes */
+p, nav {
+    font-family: 'mv_boliregular', 'Arial', sans-serif;
+    font-weight: 600;
+    padding: 20px 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'kaushan_scriptregular', 'Arial', sans-serif;
+}
+
+/* Style du titre principal */
+h1 {
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Style des sous-titres de niveau 3 avec soulignement */
+h3 {
+    font-size: 2em;
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 50px;
+    text-decoration: underline;
+}
+
+iframe {
+    width: 60%;
+    height: 65%;
+}
+
+/* Styles pour la section principale */
+main {
+    background-color: #FFFFE0;
+    border-radius: 15px;
+    border: #A42424 solid 5px;
+    text-align: center;
+}
+
+/* Styles pour les liens */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles pour le pied de page (footer) */
+footer {
+    background-color: #A42424;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+footer figure{
+    margin: 200px 200px;
+}
+
+/* Réinitialisation de la marge du paragraphe dans le pied de page */
+footer p {
+    margin: 0;
+}
+
+/* Styles pour l'image dans l'en-tête (header) */
+header > img {
+    float: right;
+}
+
+/* Styles pour les sections de la page */
+section {
+    position: relative;
+}
+
+/* Styles pour l'en-tête de la page */
+header {
+    position: relative;
+    height: 100px;
+    /* Image de fond pour le logo à droite centré */
+    background: url('../HTML/images/Logo.png') no-repeat right center / 100px;
+}
+
+.scroll_container{
+    scroll-behavior: smooth;
+}
+
+.image_clichee img:hover{
+    transition: transform 0.1s 0.2s;
+}
+
+/* Styles pour le menu latéral (sidebar) */
+#sidebar {
+    max-height: 100%;
+    height: 30em;
+    width: 20em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #A42424;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+    color: black;
+    border: #ffffe0 5px solid;
+    border-radius: 15px;
+}
+
+#sidebar a {
+    padding: 10px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar .submenu {
+    padding-left: 50px;
+    display: none;
+}
+
+#sidebar .submenu a {
+    padding: 10px 0;
+}
+
+#sidebar a.has-submenu::after {
+    content: '\25B8';
+    margin-left: 10px;
+}
+
+#sidebar a.active.has-submenu::after {
+    content: '\25BE';
+}
+
+/* Styles pour l'icône du menu */
+#menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+#S1 > article:first-of-type > img{
+    width: 50vh;
+    height: 30vh;
+}
+
+#S2 > article:first-of-type > img{
+    width: 200px;
+    height: 250px;
+}
+
+div > img{
+    width: 50px;
+    height: 50px;
+}
+
+figure > img{
+    width: 500px;
+    height: 270px;
+}
+
+#saison1 > img, #saison2 > img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Ligne décorative après chaque section */
+section::after {
+    content: "";
+    height: 6px;
+    position: absolute;
+    background: #A42424;
+    display: block;
+    top: 1%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Styles pour les réseaux sociaux */
+.reseaux {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* Styles pour le menu du pied de page (footer) */
+.footer_menu {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.footer_menu img {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.star {
+    background-image : url("images/Etoile_Pleine.png");
+    background-size : cover;
+    position : relative;
+    transition : transform 0.3s ease-in-out;
+}
+   
+   
+.star:hover {
+    box-shadow : 0 0 10px 5px #000000;
+    animation : shadow-pulse 1s infinite;
+}
+   
+   
+@keyframes shadow-pulse {
+    0%, 100% {
+        box-shadow : 0 0 10px 5px #ffcc00;
+    }
+    50% {
+        box-shadow : 0 0 20px 10px #ffcc00;
+    }
+}
+
+/* --------- Page présentation --------- */
+
+.page-presentation > main {
+    width: 70%;
+    margin-left: 20em;
+}
+
+.page-presentation iframe{
+    width: 50%;
+    height: 50%;
+}
+
+.page-presentation .image_clichee{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour le conteneur principal des épisodes de la saison 1 */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+    padding: 50px 50px;
+}
+
+/* Styles pour chaque épisode représenté par une div à l'intérieur du conteneur */
+.container > div {
+    flex: 0 5 500px;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #A42424;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styles spécifiques pour le premier épisode (nth-of-type(1)) */
+.container > div:nth-of-type(1) {
+    background: url("../HTML/images/Episode1Saison1.jpg") no-repeat 50% / cover;
+}
+
+/* Styles spécifiques pour le deuxième épisode (nth-of-type(2)) */
+.container > div:nth-of-type(2) {
+    background: url("../HTML/images/Episode2Saison1.jpg") no-repeat 50% / cover;
+}
+
+/* Styles spécifiques pour le troisième épisode (nth-of-type(3)) */
+.container > div:nth-of-type(3) {
+    background: url("../HTML/images/Episode3Saison1.jpg") no-repeat 50% / cover;
+}
+
+/* Styles pour le contenu de chaque épisode, à afficher au survol (hover) */
+.container > div .content {
+    font-size: 1.5rem;
+    font-family: 'mv_boliregular', 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: #A42424;
+    background: linear-gradient(0deg, #A42424 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+/* Styles pour l'effet de survol de chaque épisode */
+.container > div:hover {
+    flex: 0 0 30em;
+    box-shadow: 1px 3px 15px #A42424;
+    transform: translateY(-30px);
+}
+
+/* Styles pour afficher le contenu lors du survol de chaque épisode */
+.container > div:hover .content {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+/* Styles pour un élément en ligne à l'intérieur du contenu de chaque épisode */
+.container > div .content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+
+/* Styles pour le conteneur principal des épisodes de la saison 2 */
+.container2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+    padding: 50px 50px;
+}
+
+/* Styles pour chaque épisode représenté par une div à l'intérieur du conteneur */
+.container2 > div {
+    flex: 0 5 500px;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #A42424;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styles spécifiques pour le premier épisode (nth-of-type(1)) */
+.container2 > div:nth-of-type(1) {
+    background: url("../HTML/images/Episode1Saison2.jpg") no-repeat 50% / cover;
+}
+
+/* Styles spécifiques pour le deuxième épisode (nth-of-type(2)) */
+.container2 > div:nth-of-type(2) {
+    background: url("../HTML/images/Episode2Saison2.jpg") no-repeat 50% / cover;
+}
+
+/* Styles spécifiques pour le troisième épisode (nth-of-type(3)) */
+.container2 > div:nth-of-type(3) {
+    background: url("../HTML/images/Episode3Saison2.jpg") no-repeat 50% / cover;
+}
+
+/* Styles pour le contenu de chaque épisode, à afficher au survol (hover) */
+.container2 > div .content2 {
+    font-size: 1.5rem;
+    font-family: 'mv_boliregular', 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: #A42424;
+    background: linear-gradient(0deg, #A42424 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+/* Styles pour l'effet de survol de chaque épisode */
+.container2 > div:hover {
+    flex: 0 0 30em;
+    box-shadow: 1px 3px 15px #A42424;
+    transform: translateY(-30px);
+}
+
+/* Styles pour afficher le contenu lors du survol de chaque épisode */
+.container2 > div:hover .content2 {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+/* Styles pour une animation pulsante lente */
+@keyframes pulseSlow {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: .5;
+        transform: scale(.85);
+    }
+}
+
+/* Smartphone : */
+@media screen and (max-width: 428px) {
+    .page-critique header {
+        position: relative;
+        height: 50px;
+        /* Image de fond pour le logo à droite centré */
+        background: url('../HTML/images/Logo.png') no-repeat right center / 50px;
+    }
+
+    .page-presentation > main {
+        width: 90%;
+        margin-left: 20em;
+    }
+
+    .page-critique main{
+        margin: 0 20em;
+    }
+
+    .page-critique button{
+        width: 90px;
+        height: 50px;
+        text-align: center;
+    }
+
+    .page-critique .note{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .page-critique h3{
+        margin: 0 10px;
+    }
+
+    .page-critique {
+        position: relative;
+        top: 0;
+        margin: 0;
+        margin-top: 6em;
+        margin-bottom: 5em;
+        font-size: small;
+        background-color: red;
+    }
+
+    .page-presentation {
+        position: relative;
+        top: 0;
+        left: -8em;
+        margin: 0;
+        margin-top: 6em;
+        margin-bottom: 5em;
+        font-size: small;
+        background-color: red;
+    }
+
+    .page-contact {
+        position: relative;
+        top: 3em;
+        left: -15em;
+        margin: 0;
+        margin-top: 6em;
+        margin-bottom: 5em;
+        font-size: small;
+        background-color: red;
+    }
+
+    .page-contact main{
+        width: 50em;
+        height: 50em;
+    }
+
+    .page-presentation header{
+        position: relative;
+        height: 50px;
+        /* Image de fond pour le logo à droite centré */
+        background: url('../HTML/images/Logo.png') no-repeat right center / 50px;
+    }
+
+    /* Les images */
+    #S1 > article:first-of-type > img{
+        width: 40vh;
+        height: 25vh;
+    }
+
+    #S1, #S2{
+        text-align: center;
+    }
+    
+    #S2 > article:first-of-type > img{
+        width: 100px;
+        height: 150px;
+    }
+    
+    .page-presentation div > img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .page-presentation figure > img{
+        width: 300px;
+        height: 150px;
+    }
+    
+    #saison1 > img, #saison2 > img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .page-presentation footer, .page-critique footer, .page-contact footer{
+        font-size: 0.6em;
+    }
+
+    #menuIcon {
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        z-index: 1;
+        color: black;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Episodes Saison 2 */
+    .container2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        gap: 10px;
+        padding: 0px 0px;
+        margin-top: 3em;
+    }
+
+    .container2 > div {
+        flex: 0 5 120px;
+        border-radius: 0.5rem;
+        transition: flex 0.3s, box-shadow 0.3s, transform 0.3s;
+        box-shadow: 1px 5px 15px #A42424;
+        position: relative;
+        overflow: hidden;
+        transform: translatey(0);
+    }
+
+    .container2 > div.active {
+        flex: 0 0 20em;
+        box-shadow: 1px 3px 15px #A42424;
+        transform: translatey(-30px);
+    }
+
+    .container2 > div.active .content2 {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+    }
+
+    .container2 > div .content2 {
+        font-size: 0.7rem;
+        font-family: 'mv_boliregular', 'Arial', sans-serif;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        background: #A42424;
+        background: linear-gradient(0deg, #A42424 0%, rgba(255, 255, 255, 0) 100%);
+        transform: translatey(100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+    }
+
+    .container2 > div:hover {
+        flex: 0 0 20em;
+        box-shadow: 1px 3px 15px #A42424;
+        transform: translatey(-30px);
+    }
+
+    .container2 > div:hover .content2 {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+    }
+
+    .container2 > div.transition {
+        transition: flex 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .container, .container2{
+        width: 200px!important;
+        height: 200px!important;
+        margin-left: 80px;
+    }
+
+    /*Episode S1*/
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        gap: 10px;
+        padding: 0px 0px;
+        margin-top: 3em;
+    }
+    
+    .container > div {
+        flex: 0 5 60px;
+        border-radius: 0.5rem;
+        transition: flex 0.3s, box-shadow 0.3s, transform 0.3s;
+        box-shadow: 1px 5px 15px #A42424;
+        position: relative;
+        overflow: hidden;
+        transform: translatey(0);
+    }
+    
+    .container > div.active {
+        flex: 0 0 10em;
+        box-shadow: 1px 3px 15px #A42424;
+        transform: translatey(-30px);
+    }
+    
+    .container > div.active .content {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+    }
+    
+    .container > div .content {
+        font-size: 0.7rem;
+        font-family: 'mv_boliregular', 'Arial', sans-serif;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        background: #A42424;
+        background: linear-gradient(0deg, #A42424 0%, rgba(255, 255, 255, 0) 100%);
+        transform: translatey(100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+    }
+    
+    .container > div:hover {
+        flex: 0 0 20em;
+        box-shadow: 1px 3px 15px #A42424;
+        transform: translatey(-30px);
+    }
+    
+    .container > div:hover .content {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+    }
+
+    .container > div.transition {
+        transition: flex 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .page-acceuil main{
+        width: 20em;
+    }
+
+    .page-acceuil iframe{
+        width: 200px;
+        height: 200px;
+        top: -10em;
+    }
+
+    .page-acceuil footer{
+        font-size: xx-small ;
+    }
+
+    .page-presentation iframe{
+        width: 70%;
+        height: 25%;
+    }
+}
+
+
+/* --------- Page critique --------- */
+
+
+
+.star {
+    width : 70px;
+    height : 70px;
+    background-image : url("../HTML/images/Etoile_Pleine.png");
+    background-size : cover;
+    position : relative;
+    transition : transform 0.3s ease-in-out;
+}
+
+
+.star:hover {
+    box-shadow : 0 0 10px 5px #000000;
+    animation : shadow-pulse 1s infinite;
+}
+
+#quiz-container {
+    background-color : #FFFFE0;
+    padding: 20px;
+}
+  
+.question {
+    margin-bottom: 20px;
+}
+  
+button {
+    background-color: #A42424;
+    color: #FFFFE0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+button:hover {
+    background-color: #731F1F; /* Une nuance plus foncée pour un contraste visible */
+    color: #FFFFE0;
+}
+
+
+#result {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#userFeedback {
+    display: none;
+    width: 100%; /* Ajuster la largeur de la zone de texte à 100% */
+    height: 100px; /* Définir la hauteur de la zone de texte en pixels (ajustez selon vos besoins) */
+    margin-bottom: 10px; /* Ajouter une marge en bas pour l'espacement */
+}
+
+  
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: bounce 1.5s infinite ease-in-out, changeShapeAndColor 5s infinite alternate;
+  }
+  
+  .loader:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .loader:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .loader:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes changeShapeAndColor {
+    0%, 100% {
+      border-radius: 50%;
+      background-color: black;
+      transform: rotate(0deg);
+    }
+    50% {
+      border-radius: 0%;
+      background-color: #e74c3c;
+      transform: rotate(360deg);
+    }
+  }
+
+
+  #header-divider {
+    height: 2px; /* Hauteur du trait */
+    background-color: #3498db; /* Couleur du trait, ajustez selon vos préférences */
+    width: 100%; /* Largeur du trait (pleine largeur du conteneur) */
+    position: relative;
+    margin: 20px 0; /* Marge pour espacer le trait du contenu autour */
+    animation: blink 1.5s infinite; /* Animation pour faire clignoter le trait */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.page-critique header {
+    display : flex;
+    align-items : center;
+    align-self : center;
+    text-align : center;
+    justify-content : center;
+    margin-bottom: 20px;
+}
+
+
+.page-critique header > img {
+    position : relative;
+    height : 100px;
+    width : 100px;
+    float : right;
+}
+
+
+.page-critique main{
+    width: 70%;
+    margin-left: 20em;
+}
+
+.page-critique section > div > img {
+    height : 50px;
+    width : 50px;
+}
+
+
+.page-critique   section > div > div > img {
+    height : 35px;
+    width : 35px;
+}
+
+
+.page-critique   section > div {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    align-content : center;
+    align-items : center;
+    align-self : center;
+}
+
+
+.page-critique section > div > div {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+}
+
+.page-critique section {
+    display : flex;
+    flex-direction : column;
+}
+
+
+.page-critique nav {
+    display : block;
+}
+
+
+/* --------- Page contact --------- */
+
+.page-contact{
+    width: 40%;
+    height: 15em;
+    margin: 5em 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      #121212 50%,
+      #121212 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+}
+
+.page-contact button{
+    width: 50%;
+    font: bold 0.9em sans-serif;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: #A42424;
+    color: white;
+  
+    cursor: pointer;
+}
+
+.page-contact > main {
+    width: 50em;
+    height: 25em;
+}
+
+.page-contact li{
+    list-style-type: none;
+}
+
+.page-contact label, .page-contact button{
+    font-family: 'mv_boliregular', 'Arial', sans-serif;
+}
+
+.page-contact button:hover, .page-contact button:focus{
+    outline: none;
+    color: black;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  
+  section {
+      padding: 50px 0;
+  }
+  
+  .container {
+      max-width: 1044px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .contact_carousel {
+    margin: 10em -2em;
+  }
+
+  .carousel {
+      display: block;
+      text-align: left;
+      position: relative;
+      margin-bottom: 22px;
+      
+      > input {
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          
+          &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+          &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+          &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+          &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+          &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+          &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+          
+          &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.5); }
+          &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.5); }
+          &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.5); }
+          &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.5); }
+          &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.5); }
+          &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(255, 0, 0, 0.5); }
+      }
+  }
+  
+  .carousel__slides {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
+  }
+  
+  .carousel__slide {
+      position: relative;
+      display: block;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: all 300ms ease-out;
+      vertical-align: top;
+      box-sizing: border-box;
+      white-space: normal;
+      
+        figure {
+          display: flex;
+          margin: 0;
+      }
+      
+       div {
+          @include aspect-ratio(3, 2);
+          width: 100%;
+      }
+      
+      img {
+          display: block;
+          flex: 1 1 auto;
+          object-fit: cover;
+      }
+      
+      &.scrollable {
+          overflow-y: scroll;
+      }
+  }
+  
+  .carousel__thumbnails {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0 -10px;
+      
+      .carousel__slides + & {
+          margin-top: 20px;
+      }
+      
+      li {        
+          flex: 1 1 auto;
+          max-width: calc((100% / 6) - 20px);  
+          margin: 0 10px;
+          transition: all 300ms ease-in-out;
+      }
+      
+      label {
+          display: block;
+          @include aspect-ratio(1,1);
+
+                    
+          &:hover,
+          &:focus {
+              cursor: pointer;
+              
+              img {
+                  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                  transition: all 300ms ease-in-out;
+              }
+          }
+      }
+  }
+
+.petite_image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image_developper{
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+
+/* --------- Page acceuil --------- */
+.Accueil-h2{
+    font-family: 'mv_boliregular', sans-serif;
+}
+
+.Stranger-things {
+    text-align: center;
+}
+
+.Série p {
+    text-align: center;
+}
+
+.Série img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.Personnages img {
+    border-radius: 20px;
+}
+
+.Personnages ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.Personnages-principaux p {
+    text-align: center;
+}
+
+.Personnages-principaux img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+/*styles pour l'article' "Acteurs"*/
+
+.Acteurs {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px; 
+}
+
+.Acteurs img {
+    max-width: 200px;
+    max-height: 150px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.partie1, .partie2 {
+    flex: 1; 
+    padding: 10px; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Eleven, .Dustin, .Hopper, .Joyce, .Will, .Lucas{
+    margin-bottom: 40px;
+}
+
+/*styles pour la section "Awards"*/
+
+.Awards {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.Awards img{
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.MTV-Awards, .PC-awards {
+    display: flex;
+    align-items: center; 
+}
+
+.SAG-awards-2017, .Saturn-awards, .SAG-awards2018{
+    display: flex;
+    align-items: center;
+}
+
+.SAG-awards-2017 img, .Saturn-awards img, .SAG-awards2018 img {
+    order: -1; 
+} 
+
+.li1 {
+    list-style: none;
+}
+
+.bande_annonce{
+    height: 60vh;
+}
+
+.page-acceuil{
+    margin-left: 20%;
+    height: 100%;
+    width: 80%;
+}
+
+.page-acceuil section{
+    margin: 20px 20px;
+}
+
+.page-acceuil iframe{
+    position: relative;
+    top: 50%;
+}
+
+.page-acceuil .Acteurs{
+    display: flex;
+    flex-wrap: wrap;
+}
